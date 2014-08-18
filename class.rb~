@@ -1,0 +1,32 @@
+
+class User
+	def self.user_count_display
+		puts" \nJMA World currently has #{@@user_count} user profiles\n"
+	end 
+	@@user_count= 0
+	attr_accessor :name, :age, :city
+	def initialize(name, age, city, username, password)
+		@name=name
+		@age=age
+		@city=city
+		@username=username
+		@password=password
+		@@user_count += 1
+		puts "\n#{@name} you have successfully created a new profile in the JMA world.\n"
+	end
+	def info_dis
+		puts"\nHello welcome to the JMA app #{name}! \n User Profile: \n\t Name: #{@name}\n\t Age:#{@age} \n\t City: #{@city}\n" 
+	end
+	def login_prompt #will ask user for login details
+	end
+	def user_login_check #will verify userlogin and reveal profile
+	end
+
+end
+
+user1 = User.new("Mencey", 18, "London", "menzizle", "money")
+user1.info_dis
+User.user_count_display
+
+
+		
