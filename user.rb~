@@ -1,5 +1,3 @@
-
-
 class User 
 	def self.filepath=(path=nil)
 		@@filepath- File.join(APP_ROOT, path)
